@@ -325,7 +325,7 @@ img {
         border-radius: 3px;
         background-color: var(--white);
         transition: all 1000ms ease;
-        box-shadow: 0 0 150px var(--darkBlue);
+        /* box-shadow: 0 0 150px var(--darkBlue); */
     }
 
     .menu li {
