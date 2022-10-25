@@ -1,0 +1,285 @@
+@import url(./variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fontSize);
+    font-family: var(--fontFamily);
+    /* background-color: var(--darkBlue); */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.header  {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    position: relative;
+    z-index: 10;
+}
+
+.header .container,
+.presentation .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    flex-grow: 2;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu li,
+.requestButton {
+    cursor: pointer;
+}
+
+.menu li {
+    position: relative;
+    list-style: none;
+    color: var(--grayishBlue);
+    font-size: 1rem;
+    padding: 2%;
+}
+
+.menu li::before {
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient);
+    transition: all 500ms ease;
+}
+
+.requestButton {
+    outline: none;
+    border: none;
+    font-weight: 700;
+    color: var(--white);
+    height: 3rem;
+    width: 150px;
+    padding: 0.5rem;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #31d35c, #2bb7da);
+    transition: all 500ms ease;
+}
+
+.menu li:hover::before {
+    width: 65%;
+}
+
+.requestButton:hover {
+    opacity: 0.7;
+}   
+
+.presentation {
+    background-color: var(--verylightGray);
+    position: relative;
+    overflow-x: clip;
+}
+
+.presentation .textContent {
+    width: 40%;
+    padding: 15% 0;
+}
+
+.presentation .textContent h1,
+.chooseEasy .textContent h2,
+.articles .textContent h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--darkBlue);
+}
+
+.presentation .textContent p,
+.chooseEasy p,
+.box p,
+.rights p {
+    color: var(--grayishBlue);
+    line-height: 1.8rem;
+}
+
+.chooseEasy p,
+.rights p {
+    font-size: 1rem;
+}
+
+.presentation .textContent h1,
+.presentation .textContent p,
+.chooseEasy .textContent h2,
+.articles .textContent h2 {
+    margin-bottom: 2rem;
+}
+
+.presentation .images {
+    width: 60%;
+}
+
+.presentation img {
+    position: absolute;
+}
+
+.presentation picture img {
+    top: -45%;
+}
+
+.presentation .images > img {
+    top: -19%;
+    right: -9%;
+}
+
+.chooseEasy,
+.articles {
+    background-color: var(--lightgrayishBlue);
+    padding: 8% 0;
+}
+
+.chooseEasy .textContent h2,
+.articles .textContent h2 {
+    font-size: 2rem;
+}
+
+.chooseEasy .textContent p {
+    width: 60%;
+    font-weight: 300;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6%;
+}
+
+.box {
+    width: 23%;
+}
+
+.box img {
+    margin-bottom: 2.5rem;
+}
+
+.box h3 {
+    color: var(--darkBlue);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.articles {
+    background-color: var(--verylightGray);
+}
+
+.articles .box .textContent  {
+    background-color: var(--white);
+    padding: 10%;
+    border-radius: 0 0 9px 9px;
+}
+
+.articles .box span {
+    font-size: 0.8rem;
+    color: var(--grayishBlue);
+}
+
+.articles .box h4 {
+    margin-bottom: 1rem;
+}
+
+.articles .box h4 {
+    color: var(--darkBlue);
+    font-weight: 400;
+}
+
+.articles .box h4:hover,
+.footerMenus li:hover {
+    transition: all 500ms ease;
+    color: var(--limeGreen);
+    cursor: pointer;
+}
+
+.articles .box p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+.articles .box article {
+    margin-top: 0.7rem;
+}
+
+.articles .box img {
+    width: 100%;
+    height: 45%;
+    margin: 0;
+    border-radius: 9px 9px 0 0;
+}
+
+.footer {
+    background-color: var(--darkBlue);
+    padding: 3% 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .icons,
+.footer .footerMenus  {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .footerMenus {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1rem;
+    flex-grow: 0.2;
+    justify-content: space-between;
+}
+
+.footer .footerMenus li {
+    list-style: none;
+    margin-bottom: 15%;
+}
+
+.footer .footerMenus li:last-child {
+    margin: 0;
+}
+
+.social, 
+.rights {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.rights button {
+    align-self: flex-end;
+}
+
+.icons li svg:hover path {
+    fill: var(--limeGreen);
+    transition: all 500ms ease;
+    cursor: pointer;
+}
